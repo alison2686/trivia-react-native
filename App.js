@@ -1,12 +1,12 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, SafeAreaView } from "react-native";
-import QuestionCard from "./src/components/QuestionCard";
+import { StyleSheet, Text, View, SafeAreaView, Button } from "react-native";
+// Components
+import GameLogic from "./src/components/GameLogic";
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <Text>Test your trivia knowledge!</Text>
-      <QuestionCard />
+      <GameLogic />
     </SafeAreaView>
   );
 }

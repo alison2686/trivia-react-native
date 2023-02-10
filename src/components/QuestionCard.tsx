@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Button } from "react-native";
 
 type Props = {
   question: string;
@@ -20,7 +20,17 @@ const QuestionCard: React.FC<Props> = ({
 }) => {
   return (
     <View>
-      <Text>Question Card</Text>
+      <Text>
+        Question: {questionNr} / {totalQuestions}
+      </Text>
+      <Text>{question}</Text>
+      <View>
+        {answers.map((answer) => (
+          <View key={answer}>
+            <Button title={answer} disabled={userAnswer} />
+          </View>
+        ))}
+      </View>
     </View>
   );
 };
